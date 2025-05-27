@@ -1,68 +1,76 @@
 import React from "react";
+import SocialIcon from "./SocialIcon";
+import appstore from "../../../assets/images/download (2).png";
+import googleplay from "../../../assets/images/download (3).png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      {/* <footer className="py-10 text-center text-white bg-gray-800 md:text-right rtl">
-        <div className="container flex flex-col items-start justify-between gap-10 px-4 mx-auto md:flex-row">
-          <div className="space-y-4 md:w-1/3">
-            <h3 className="text-xl font-bold">تطبيق الهاتف</h3>
-            <p>
-              حمل التطبيق الآن على هاتفك حيث يتوفر الآن بنظامي الاندرويد و الآبل
+      <footer className="flex items-center justify-center px-24 pt-12 pb-6 bg-gray text-main md:text-right rtl">
+        <div className="container grid gap-2 mx-auto md:grid-cols-3 md:flex-row">
+          <div className="">
+            <h3 className="py-4 text-[20px] font-semibold">مختصرات سريعه </h3>
+            <div>
+              <div className="flex ">
+                <div className="flex flex-col w-1/2 gap-y-2">
+                  <p className="py-1">
+                    <Link to={""} className=" text-[16px] hover:text-secondary">
+                      من نحن{" "}
+                    </Link>
+                  </p>
+                  <p className="py-1">
+                    <Link
+                      to={""}
+                      className="py-3 text-[16px] hover:text-secondary"
+                    >
+                      الفصول{" "}
+                    </Link>
+                  </p>
+                </div>
+                <div className="flex flex-col w-1/2 gap-y-2">
+                  <p className="py-1">
+                    <Link
+                      to={""}
+                      className="py-3 text-[16px] hover:text-secondary"
+                    >
+                      سياسه الخصوصيه{" "}
+                    </Link>
+                  </p>
+
+                  <p className="py-1">
+                    <Link
+                      to={""}
+                      className="py-3 text-[16px] hover:text-secondary"
+                    >
+                      اتصل بنا
+                    </Link>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="py-3 text-xl font-semibold"> تابعونا علي </h3>
+            <div className="py-1">
+              <SocialIcon />
+            </div>
+            <p>جميع الحقوق محفوظة لسنة 2025 ©</p>
+          </div>
+
+          <div>
+            <h3 className="py-1 text-[28px] font-semibold"> تطبيق الهاتف</h3>
+            <p className="text-[16px] ">
+              حمل التطبيق الان على هاتفك حيث يتوفر الان بنظامي الاندرويد و الأبل
             </p>
-            <div className="flex justify-center gap-2 md:justify-start">
-              <img
-                src="/google-play-badge.png"
-                alt="Google Play"
-                className="w-32"
-              />
-              <img
-                src="/app-store-badge.png"
-                alt="App Store"
-                className="w-32"
-              />
+            <div className="py-2">
+              <img src={appstore} alt="appstore" className="w-[50%] py-1" />
+              <img src={googleplay} alt="googleplay" className="w-[50%] py-1" />
             </div>
-          </div>
-
-          <div className="space-y-4 md:w-1/3">
-            <h3 className="text-xl font-bold">تابعونا على</h3>
-            <div className="flex justify-center gap-4 text-2xl md:justify-start">
-              <FaInstagram className="cursor-pointer hover:text-pink-500" />
-              <FaXTwitter className="cursor-pointer hover:text-blue-400" />
-              <FaFacebookF className="cursor-pointer hover:text-blue-600" />
-            </div>
-            <p className="mt-4 text-sm">© 2025 جميع الحقوق محفوظة</p>
-          </div>
-
-          <div className="space-y-4 md:w-1/3">
-            <h3 className="text-xl font-bold">مختصرات سريعه</h3>
-            <ul className="space-y-1">
-              <li>
-                <a href="#" className="hover:underline">
-                  من نحن
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  الفصول
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  سياسة الخصوصية
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  اتصل بنا
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
-      </footer> */}
-
-      <h1>Footer </h1>
+      </footer>
     </>
   );
 };
