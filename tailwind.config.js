@@ -12,6 +12,7 @@ export default {
         primary: "#FEDC82",
         secondary: "#DEAB66",
         gray: "#333333",
+        graytext: "#767676",
       },
       fontFamily: {
         cairo: ["Cairo", "sans-serif"],

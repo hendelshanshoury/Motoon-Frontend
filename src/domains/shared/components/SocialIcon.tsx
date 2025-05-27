@@ -23,7 +23,7 @@ const SocialIcon = () => {
       {socialItems.map((item, index) => (
         <li
           key={index}
-          className="mx-1 transition hover:cursor-pointer hover:shadow-lg"
+          className="mx-1 transition rounded-full hover:cursor-pointer hover:shadow-lg"
         >
           <a
             href={item.href}

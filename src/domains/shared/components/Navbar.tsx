@@ -10,6 +10,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import clsx from "clsx";
 import logo from "../../../assets/images/download (1).png"; // Adjust the path as necessary
 import SocialIcon from "./SocialIcon";
+import { useState } from "react";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const navLinks = [
   { name: "الرئيسية", path: "/" },
@@ -17,13 +19,26 @@ const navLinks = [
   { name: "الفصول", path: "/classes" },
   { name: "اتصل بنا", path: "/contact" },
 ];
+const navLinkssm = [
+  { name: "الرئيسية", path: "/" },
+  { name: "من نحن", path: "/about" },
+  { name: "الفصول", path: "/classes" },
+  { name: "اتصل بنا", path: "/contact" },
+  { name: " انشاء حساب جديد", path: "/register" },
+  { name: " تسجيل الدخول ", path: "/login" },
+  // { name: `support  ${(<MdEmail />)}`, path: "/support" },
+];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <header
-      className={clsx("fixed  w-full z-50 ")}
+      className={clsx(
+        " absolute inset-x-0 top-0 z-50 bg-transparent  transition-all duration-300  overflow-hidden"
+      )}
     >
-      <div className="px-28 bg-gray">
+      <div className="hidden px-28 bg-gray lg:block">
         <div className="flex items-center justify-between gap-2 ">
           <div>
             <NavLink
@@ -56,11 +71,35 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="container flex items-center justify-between px-32 py-8 mx-auto">
+      <div className="container flex items-center justify-between px-3 py-8 mx-auto bg-transparent md:px-18 lg:px-32">
         <Link to="/" className="text-2xl font-bold ">
-          <img src={logo} alt="logoImage" className="w-[70%]" />
+          <img src={logo} alt="logoImage" className="w-[60%] md:w-[70%] " />
         </Link>
-        <nav className="gap-4 px-3 text-sm font-medium bg-transparent en md:flex">
+        <div className="flex items-center px-6 border rounded-lg lg:hidden border-graytext focus-within:ring-4 focus-within:ring-graytext">
+          <button
+            onClick={() => setIsOpen((prev) => !prev)}
+            type="button"
+            className="inline-flex items-center justify-center px-2 py-px rounded-md text-graytext hover:bg-gray-100 lg:hidden"
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="h-9 w-9"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="hidden gap-4 px-3 text-sm font-medium bg-transparent en lg:flex">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
@@ -76,6 +115,52 @@ const Navbar = () => {
             </NavLink>
           ))}
         </nav>
+      </div>
+
+      <div className="overflow-hidden ">
+        {/* Mobile menu, show/hide based on menu open state. */}
+        <div
+          className={`fixed top-[85px] left-1/2 -translate-y-[120%] transform  -translate-x-1/2 md:w-[83%] w-[95%]  z-50 bg-white rounded-xl transition-transform  ${
+            isOpen
+              ? "translate-y-[0%] opacity-100 duration-700   pointer-events-auto"
+              : "opacity-0 -translate-y-20  duration-700 pointer-events-none "
+          }`}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="">
+            <div className="flex flex-col items-center justify-center py-4 mt-6 space-y-4 text-center">
+              {navLinkssm.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    clsx(
+                      "text-[21px] transition font-cairo mx-3 py-px font-bold hover:text-secondary nav-link w-fit",
+                      isActive ? "text-secondary" : "text-graytext"
+                    )
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+              <NavLink
+                to={"/support"}
+                className={({ isActive }) =>
+                  clsx(
+                    "text-[21px] transition font-cairo mx-3 py-px font-bold hover:text-secondary nav-link w-fit flex justify-center items-center",
+                    isActive ? "text-secondary" : "text-graytext"
+                  )
+                }
+              >
+                <MdOutlineMailOutline className="inline-block text-[24px] mx-1" />{" "}
+                <span>support</span>
+              </NavLink>
+              {/* ?=========================================== */}
+              <SocialIcon />
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );
