@@ -7,7 +7,6 @@
 // export default Navbar;
 // src/domains/shared/components/Navbar.tsx
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
 import clsx from "clsx";
 import logo from "../../../assets/images/download (1).png"; // Adjust the path as necessary
 import SocialIcon from "./SocialIcon";
@@ -22,7 +21,7 @@ const navLinks = [
 const Navbar = () => {
   return (
     <header
-      className={clsx("fixed top-0 w-full z-50 transition-all duration-300")}
+      className={clsx("fixed  w-full z-50 ")}
     >
       <div className="px-28 bg-gray">
         <div className="flex items-center justify-between gap-2 ">
@@ -61,7 +60,7 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-bold ">
           <img src={logo} alt="logoImage" className="w-[70%]" />
         </Link>
-        <nav className="hidden gap-4 px-3 text-sm font-medium md:flex">
+        <nav className="gap-4 px-3 text-sm font-medium bg-transparent en md:flex">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}

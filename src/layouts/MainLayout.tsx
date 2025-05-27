@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "./../domains/shared/components/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../domains/shared/components/Footer";
+import App from "../App";
+import { AppDownloadSectio } from "../domains/shared/components/AppDownloadSectio";
 
 const MainLayout = () => {
   return (
@@ -10,6 +12,7 @@ const MainLayout = () => {
       {/* <div className="px-5 py-10 lg:py-20"> */}
       <Outlet />
       {/* </div> */}
+      <AppDownloadSectio />
       <Footer />
     </>
   );
