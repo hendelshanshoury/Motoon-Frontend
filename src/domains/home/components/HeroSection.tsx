@@ -14,7 +14,9 @@ const HeroSection = () => {
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="absolute inset-0 z-10 flex items-center justify-center mt-4">
-              <button className="px-12 py-3 text-xl text-black rounded-3xl bg-primary hover:bg-secondary">ابدا التعلم الان</button>
+              <button className="px-12 py-3 text-xl text-black rounded-3xl bg-primary hover:bg-secondary">
+                ابدا التعلم الان
+              </button>
             </div>
           </div>
         </div>

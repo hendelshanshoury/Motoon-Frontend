@@ -7,7 +7,7 @@ import motonphone from "../../../assets/images/motoon-phone-2f77f833.png"; // Ad
 export const AppDownloadSectio = () => {
   return (
     <>
-      <div className="container relative py-20 mx-auto md:px-12 lg:px-28 bg-main">
+      <div className="relative py-20 mx-auto  md:px-12 lg:px-28 bg-main">
           <div className="absolute right-0 hidden top-10 lg:block">
             <img src={background} alt="background" className="w-[65%] " />
           </div>

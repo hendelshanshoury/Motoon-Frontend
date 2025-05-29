@@ -26,7 +26,6 @@ const navLinkssm = [
   { name: "اتصل بنا", path: "/contact" },
   { name: " انشاء حساب جديد", path: "/register" },
   { name: " تسجيل الدخول ", path: "/login" },
-  // { name: `support  ${(<MdEmail />)}`, path: "/support" },
 ];
 
 const Navbar = () => {
@@ -71,7 +70,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="container flex items-center justify-between px-3 py-8 mx-auto bg-transparent md:px-18 lg:px-32">
+      <div className="flex items-center justify-between px-3 py-8 mx-auto bg-transparent md:px-18 lg:px-32">
         <Link to="/" className="text-2xl font-bold ">
           <img src={logo} alt="logoImage" className="w-[60%] md:w-[70%] " />
         </Link>
