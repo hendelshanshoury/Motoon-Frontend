@@ -41,14 +41,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-2 ">
           <div>
             <NavLink
-              to={"/"}
+              to={"/login"}
               className="px-2 text-[16px] font-semibold text-main font-cairo hover:text-secondary"
             >
               تسجيل الدخول
             </NavLink>
             <span className="px-2 text-xl text-main">|</span>
             <NavLink
-              to={"/"}
+              to={"/register"}
               className="px-2 text-[16px] font-semibold text-main font-cairo hover:text-secondary"
             >
               انشاء حساب جديد{" "}

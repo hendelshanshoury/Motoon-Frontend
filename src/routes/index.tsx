@@ -9,6 +9,7 @@ import Support from "./../pages/Support";
 import Register from "./../pages/Register";
 import Login from "./../pages/Login";
 import NotFound from "./../pages/NotFound";
+import AuthLayout from "../layouts/AuthLayout";
 
 let routers = createBrowserRouter([
   {
@@ -17,12 +18,19 @@ let routers = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },
-      { path: "courses", element: <Classes /> },
+      { path: "classes", element: <Login /> },
       { path: "contact", element: <Contact /> },
       { path: "support", element: <Support /> },
-      { path: "/register", element: <Register /> },
-      { path: "/login", element: <Login /> },
+
       { path: "*", element: <NotFound /> },
+    ],
+  },
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
     ],
   },
 ]);
