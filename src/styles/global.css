@@ -1,0 +1,6 @@
+.register-input {
+  @apply px-3 py-3 border rounded-3xl focus:border-secondary outline-0 placeholder:text-sm lg:placeholder:text-base;
+}
+.custom-button {
+  @apply flex justify-center items-center py-2.5 mt-6 text-lg font-medium text-black transition duration-300 bg-primary rounded-3xl hover:bg-secondary w-[70%] mx-auto;
+}

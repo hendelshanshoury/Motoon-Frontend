@@ -27,7 +27,6 @@ const navLinkssm = [
   { name: " انشاء حساب جديد", path: "/register" },
   { name: " تسجيل الدخول ", path: "/login" },
 ];
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -37,7 +36,7 @@ const Navbar = () => {
         " absolute inset-x-0 top-0 z-50 bg-transparent  transition-all duration-300  overflow-hidden"
       )}
     >
-      <div className="hidden px-28 bg-gray lg:block">
+      <div className="hidden px-28 bg-grayy lg:block">
         <div className="flex items-center justify-between gap-2 ">
           <div>
             <NavLink
@@ -70,7 +69,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between px-3 py-8 mx-auto bg-transparent md:px-18 lg:px-32">
+      <div className="flex items-center justify-between px-5 pt-5 mx-auto bg-transparent  lg:py-8 md:w-[85%]  lg:w-[90%] lg:px-20">
         <Link to="/" className="text-2xl font-bold ">
           <img src={logo} alt="logoImage" className="w-[60%] md:w-[70%] " />
         </Link>
@@ -78,7 +77,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             type="button"
-            className="inline-flex items-center justify-center px-2 py-px rounded-md text-graytext hover:bg-gray-100 lg:hidden"
+            className="inline-flex items-center justify-center px-2 py-px rounded-md text-graytext lg:hidden"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -98,7 +97,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <nav className="hidden gap-4 px-3 text-sm font-medium bg-transparent en lg:flex">
+        <nav className="hidden gap-4 px-3 text-sm font-medium bg-transparent lg:flex">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
@@ -117,13 +116,11 @@ const Navbar = () => {
       </div>
 
       <div className="overflow-hidden ">
-        {/* Mobile menu, show/hide based on menu open state. */}
         <div
-          className={`fixed top-[85px] left-1/2 -translate-y-[120%] transform  -translate-x-1/2 md:w-[83%] w-[95%]  z-50 bg-white rounded-xl transition-transform  ${
-            isOpen
-              ? "translate-y-[0%] opacity-100 duration-700   pointer-events-auto"
-              : "opacity-0 -translate-y-20  duration-700 pointer-events-none "
-          }`}
+          className={clsx(
+            "lg:hidden mx-5 bg-main rounded-2xl transition-all duration-500 overflow-hidden md:w-[80%] md:mx-auto ",
+            isOpen ? "max-h-[500px] opacity-100 py-4 mt-2" : "max-h-0 opacity-0"
+          )}
           role="dialog"
           aria-modal="true"
         >

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="flex items-center justify-center pt-12 pb-6 md:px-24 bg-gray text-main md:text-right rtl">
+      <footer className="flex items-center justify-center pt-12 pb-6 md:px-24 bg-grayy text-main md:text-right rtl">
         <div className="container grid grid-cols-1 gap-6 mx-auto text-center 4x-2 md:grid-cols-2 md:items-start md:justify-center md:te lg:grid-cols-3 lg:items-start">
           <div className="flex flex-col items-center justify-between md:justify-center md:items-center lg:justify-start md:text-right lg:text-center lg:items-start">
             <h3 className="py-4 text-[20px] font-semibold ">مختصرات سريعه</h3>
@@ -19,7 +19,7 @@ const Footer = () => {
                   </Link>
                 </p>
                 <p className="py-1">
-                  <Link to={""} className="text-[16px] hover:text-secondary">
+                  <Link to={"login"} className="text-[16px] hover:text-secondary">
                     الفصول
                   </Link>
                 </p>
@@ -52,16 +52,16 @@ const Footer = () => {
             <p className="text-[16px]">
               حمل التطبيق الان على هاتفك حيث يتوفر الان بنظامي الاندرويد و الأبل
             </p>
-            <div className="flex items-center gap-1 py-2 md:flex-col lg:items-start">
+            <div className="flex items-center justify-center gap-1 py-2 md:flex-col lg:items-start">
               <img
                 src={appstore}
                 alt="appstore"
-                className="w-[50%] md:w-[30%] lg:w-[40%] py-1"
+                className="w-[40%] md:w-[30%] lg:w-[40%] py-1"
               />
               <img
                 src={googleplay}
                 alt="googleplay"
-                className="w-[50%] md:w-[30%] lg:w-[40%] md: py-1"
+                className="w-[40%] md:w-[30%] lg:w-[40%] md: py-1"
               />
             </div>
           </div>

@@ -10,6 +10,11 @@ import Register from "./../pages/Register";
 import Login from "./../pages/Login";
 import NotFound from "./../pages/NotFound";
 import AuthLayout from "../layouts/AuthLayout";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import toast, { Toaster } from "react-hot-toast";
+import ForgetPassword from "../pages/ForgetPassword";
+
+const queryClient = new QueryClient();
 
 let routers = createBrowserRouter([
   {
@@ -21,7 +26,6 @@ let routers = createBrowserRouter([
       { path: "classes", element: <Login /> },
       { path: "contact", element: <Contact /> },
       { path: "support", element: <Support /> },
-
       { path: "*", element: <NotFound /> },
     ],
   },
@@ -31,15 +35,18 @@ let routers = createBrowserRouter([
     children: [
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
+      { path: "forgetpassword", element: <ForgetPassword /> },
     ],
   },
 ]);
-function index() {
+
+function Index() {
   return (
-    <>
-      <RouterProvider router={routers}></RouterProvider>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={routers} />
+      <Toaster />
+    </QueryClientProvider>
   );
 }
 
-export default index;
+export default Index;

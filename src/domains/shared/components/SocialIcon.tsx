@@ -27,7 +27,7 @@ const SocialIcon = () => {
         >
           <a
             href={item.href}
-            className="flex items-center justify-center rounded-full text-gray w-7 h-7 bg-main hover:bg-secondary target='-blank'"
+            className="flex items-center justify-center rounded-full text-grayy w-7 h-7 bg-main hover:bg-secondary target='-blank'"
           >
             <span className="text-xs">{item.icon}</span>
           </a>

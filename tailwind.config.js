@@ -11,7 +11,7 @@ export default {
         main: "#FFFFFF",
         primary: "#FEDC82",
         secondary: "#DEAB66",
-        gray: "#333333",
+        grayy: "#333333",
         graytext: "#767676",
       },
       fontFamily: {
