@@ -130,6 +130,9 @@ const Navbar = () => {
                 <NavLink
                   key={link.path}
                   to={link.path}
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
                   className={({ isActive }) =>
                     clsx(
                       "text-[21px] transition font-cairo mx-3 py-px font-bold hover:text-secondary nav-link w-fit",

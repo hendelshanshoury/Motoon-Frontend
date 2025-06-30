@@ -7,12 +7,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="flex items-center justify-center pt-12 pb-6 md:px-24 bg-grayy text-main md:text-right rtl">
-        <div className="container grid grid-cols-1 gap-6 mx-auto text-center 4x-2 md:grid-cols-2 md:items-start md:justify-center md:te lg:grid-cols-3 lg:items-start">
-          <div className="flex flex-col items-center justify-between md:justify-center md:items-center lg:justify-start md:text-right lg:text-center lg:items-start">
-            <h3 className="py-4 text-[20px] font-semibold ">مختصرات سريعه</h3>
+      <footer className="flex items-center justify-center pt-12 pb-6 md:px-18 bg-grayy text-main md:text-right rtl">
+        <div className="container grid grid-cols-1 gap-6 mx-auto text-center md:grid-cols-2 md:items-start md:justify-center lg:grid-cols-3 lg:items-start">
+          
+          <div className="flex flex-col items-center justify-between md:justify-center md:items-center lg:justify-center md:text-right lg:text-center lg:items-start ">
+            <h3 className="py-4 text-[20px] font-semibold  ">مختصرات سريعه</h3>
             <div className="flex gap-2 md:items-center md:justify-between w-[100%] lg:text-start  ">
-              <div className="flex flex-col w-1/2 gap-y-2">
+              <div className="flex flex-col items-center justify-center w-1/2 gap-y-2">
                 <p className="py-1">
                   <Link to={""} className="text-[16px] hover:text-secondary">
                     من نحن
@@ -24,7 +25,7 @@ const Footer = () => {
                   </Link>
                 </p>
               </div>
-              <div className="flex flex-col w-1/2 gap-y-2">
+              <div className="flex flex-col items-center justify-center w-1/2 gap-y-2">
                 <p className="py-1">
                   <Link to={""} className="text-[16px] hover:text-secondary">
                     سياسة الخصوصية
@@ -65,6 +66,7 @@ const Footer = () => {
               />
             </div>
           </div>
+          
         </div>
       </footer>
     </>

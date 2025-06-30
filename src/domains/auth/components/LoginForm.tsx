@@ -60,7 +60,7 @@ const LoginForm = () => {
     <>
       <div className="relative w-full h-screen overflow-hidden">
         {" "}
-        <div className="absolute z-50 flex items-center justify-between px-3 py-6 bg-transparent right-8 top-6 md:px-18">
+        <div className="absolute z-50 flex items-center justify-between px-3 bg-transparent md:py-6 right-8 top-6 md:px-18">
           <Link to="/" className="text-2xl font-bold">
             <img src={logo} alt="logoImage" className="w-[60px] md:w-[60px]" />
           </Link>

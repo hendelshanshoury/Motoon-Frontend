@@ -37,14 +37,11 @@ body {
 .title::after {
   content: "";
   position: absolute;
-  /* bottom: 7px; */
   right: 0%;
   top: 90%;
-  /* transform: translateY(-50%); */
   transition: width 0.3s ease;
   width: 50%;
   height: 3px;
-  background-color: #deab66;
+  background-color: #fedc82;
 }
-
 

@@ -26,6 +26,9 @@
 import React from "react";
 import herosection from "../assets/images/header2-d1cd08ba.png"; // Adjust the path as necessary
 import { Link } from "react-router-dom";
+import SubjectType from "./SubjectType";
+import LectureType from "./LectureType";
+import { AppDownloadSection } from "./UpDownloadSection";
 
 const Home = () => {
   return (
@@ -47,6 +50,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <SubjectType />
+      <LectureType />
+      <AppDownloadSection />
     </>
   );
 };

@@ -23,9 +23,23 @@
 // export default About;
 
 import React from "react";
+import Home from "./Home";
+import SubjectType from "./SubjectType";
+import LectureType from "./LectureType";
+import { LuArrowUpDown } from "react-icons/lu";
+import { AppDownloadSection } from "./UpDownloadSection";
+import { OurVision } from "./OurVision";
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <Home />
+      {/* <SubjectType />
+      <LectureType /> */}
+      <AppDownloadSection />
+      <OurVision />
+    </>
+  );
 };
 
 export default About;
